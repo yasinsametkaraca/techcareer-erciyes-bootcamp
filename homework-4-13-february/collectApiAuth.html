@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body></body>
+  <script>
+    axios
+      .get(
+        "https://api.collectapi.com/football/results?data.league=super-lig",
+        {
+          headers: {
+            authorization:
+              "apikey 2aG2Z4uoVwou5as8cPAk4q:3AluwPLqBzPbWnNhWtQ6nj",
+          },
+        }
+      )
+      .then((res) => {
+        console.log("Response ", res.data);
+      })
+      .catch((err) => {
+        console.log("error ", err);
+      });
+  </script>
+</html>
