@@ -15,7 +15,6 @@
   <script>
     function getSuppliers() {
       document.getElementById("suppliers").innerHTML = "";
-
       axios.get("https://northwind.vercel.app/api/suppliers").then((res) => {
         let suppliers = res.data;
         suppliers.map((element) => {
